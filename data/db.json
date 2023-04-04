@@ -1,0 +1,24 @@
+{
+  "user": [
+    {
+      "name": "Margaux",
+      "mobile": "09090385195",
+      "email": "Margauxgalvez01@gmail.com",
+      "address": "906 san antonio st. tondo manila",
+      "gender": "Male",
+      "encryptedPassword": "U2FsdGVkX1+wkQ0/uC0P7qggpJFXSJF+IErbtkiWz20=",
+      "birthdate": "2023-04-03",
+      "id": 1
+    },
+    {
+      "name": "abc",
+      "mobile": "123",
+      "email": "abc@gmail.com",
+      "address": "1 street",
+      "gender": "Male",
+      "encryptedPassword": "U2FsdGVkX19EqAtqJMmyp5enR1vA8qBRTFQe7mafMhg=",
+      "birthdate": "2023-04-03",
+      "id": 2
+    }
+  ]
+}
