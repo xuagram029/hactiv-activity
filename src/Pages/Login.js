@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
+
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -76,7 +78,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-slate-500">
+    <div className="flex justify-center items-center h-screen bg-gradient-to-r from-green-400 to-green-600">
       <form className="w-full max-w-md p-10 bg-white rounded-lg shadow-lg">
         <h1 className="text-3xl font-bold mb-8 text-center">LOGIN FORM</h1>
         <input
@@ -94,11 +96,15 @@ const Login = () => {
           placeholder="Password"
         />
         <button
-          className="block w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 hover:shadow-lg"
+          className="block w-full bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold py-2 px-4 rounded mt-4 hover:shadow-lg"
           onClick={proceedLogin}
         >
           LOGIN
         </button>
+        <p className="mt-4 text-sm text-gray-600">
+          Not registered yet?{' '}
+            <Link to="/register" class="text-blue-600 hover:text-blue-800 font-medium">Click here to register</Link>
+        </p>
       </form>
     </div>
   );
