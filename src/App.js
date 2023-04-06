@@ -3,6 +3,7 @@ import Login from "./Pages/Login";
 import Registration from "./Pages/Registration";
 import { ToastContainer, toast } from 'react-toastify';
 import Encrypt from "./Pages/Encrypt";
+import Profile from "./Pages/Profile"
 
 
 const router = createBrowserRouter([
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
     {
       path: "/encrypt",
       element: <Encrypt />,
+    },
+    {
+      path: "/profile",
+      element: <Profile />,
     },
   ]);
 const App = () => {
