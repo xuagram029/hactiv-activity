@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
-
+import CryptoJS from 'crypto-js';
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -12,15 +12,25 @@ const Login = () => {
     e.preventDefault();
     if (validate()) {
       try {
-        const response = await axios.get(`http://localhost:8800/user/${username}`);
+        const response = await axios.get(`http://localhost:8800/user/`);
         const data = response.data;
-        console.log(data);
+        const user = data.find((user) => user.name === username || user.mobile === username);
+        if (user) {
+          const decrptedPassword = CryptoJS.AES.decrypt(user.encryptedPassword, "Secret Passphrase");
+          const decrypted = decrptedPassword.toString(CryptoJS.enc.Utf8);
+          if (password === decrypted) {
+            console.log(user);
+          } else {
+            toast.error('User does not exist');
+          }
+        } 
       } catch (error) {
         console.error(error);
         toast.error('Error occurred while fetching user data');
       }
     }
   };
+
 
   // const ProceedLoginusingAPI = (e) => {
   //   e.preventDefault();
