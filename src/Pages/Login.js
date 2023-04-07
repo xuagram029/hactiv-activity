@@ -16,14 +16,16 @@ const Login = () => {
         const data = response.data;
         const user = data.find((user) => user.name === username || user.mobile === username);
         if (user) {
-          const decrptedPassword = CryptoJS.AES.decrypt(user.encryptedPassword, "Secret Passphrase");
-          const decrypted = decrptedPassword.toString(CryptoJS.enc.Utf8);
-          if (password === decrypted) {
+          const userPassword = CryptoJS.AES.decrypt(user.encryptedPassword, "Secret Passphrase");
+          const decryptedPassword = userPassword.toString(CryptoJS.enc.Utf8);
+          if (password === decryptedPassword) {
             console.log(user);
           } else {
-            toast.error('User does not exist');
+            toast.error("Password doesn't match");
           }
-        } 
+        } else {
+          toast.error('User does not exist');
+        }
       } catch (error) {
         console.error(error);
         toast.error('Error occurred while fetching user data');
