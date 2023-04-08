@@ -1,0 +1,114 @@
+{
+  "user": [
+    {
+      "name": "Margaux",
+      "mobile": "09090385195",
+      "email": "Margauxgalvez01@gmail.com",
+      "address": "906 san antonio st. tondo manila",
+      "gender": "Male",
+      "encryptedPassword": "U2FsdGVkX1+wkQ0/uC0P7qggpJFXSJF+IErbtkiWz20=",
+      "birthdate": "2023-04-03",
+      "id": 1
+    },
+    {
+      "name": "abc",
+      "mobile": "123",
+      "email": "abc@gmail.com",
+      "address": "1 street",
+      "gender": "Male",
+      "encryptedPassword": "U2FsdGVkX19EqAtqJMmyp5enR1vA8qBRTFQe7mafMhg=",
+      "birthdate": "2023-04-03",
+      "id": 2
+    },
+    {
+      "name": "Mitchie Gaspar",
+      "mobile": "09201340719",
+      "email": "gasparmitchie@gmail.com",
+      "address": "19 B Katarungan St. Muzon, Malabon City",
+      "gender": "Male",
+      "encryptedPassword": "U2FsdGVkX18tn7v0tl0Ks9ty7/fB/1oC2ELm5I3Eo4w=",
+      "birthdate": "2001-04-22",
+      "id": 3
+    },
+    {
+      "name": "asdasd",
+      "mobile": "5241231231",
+      "email": "asdasd@gmail.com",
+      "address": "asdasd",
+      "gender": "Male",
+      "encryptedPassword": "U2FsdGVkX19l5dq2NM1FhMi2X+9h5/KrbgJgzhPPz8E=",
+      "birthdate": "2001-04-22",
+      "id": 4
+    },
+    {
+      "name": "asdasdasdad",
+      "mobile": "asdasdad",
+      "email": "dasdas@qweq.com",
+      "address": "zxc",
+      "gender": "Male",
+      "encryptedPassword": "U2FsdGVkX19uiP03dmVE/o13/yTmhPq/dwqnNaBNVnA=",
+      "birthdate": "2001-11-11",
+      "id": 5
+    },
+    {
+      "name": "Andy",
+      "mobile": "09101326711",
+      "email": "morinandy@gmail.com",
+      "address": "Sacramento USA",
+      "gender": "Male",
+      "encryptedPassword": "U2FsdGVkX18vkUEcjijnRsX9IeVOjN6hBo4hk9Mla+M=",
+      "birthdate": "2001-04-22",
+      "id": 6
+    },
+    {
+      "name": "Mitchie",
+      "mobile": "465465465",
+      "email": "asd@gmail.com",
+      "address": "19 B Katarungan St.",
+      "gender": "Male",
+      "encryptedPassword": "U2FsdGVkX1+6xvPfCN+HThb914ItFvkAxhSjFrSclKw=",
+      "birthdate": "2001-04-22",
+      "id": 7
+    },
+    {
+      "name": "asdasdxzx",
+      "mobile": "133123123",
+      "email": "zxzx@gmail.com",
+      "address": "as",
+      "gender": "Male",
+      "encryptedPassword": "U2FsdGVkX1+Uv+brBwp0deqbEGDDL1i+7TKpnfT8Iag=",
+      "birthdate": "2001-04-22",
+      "id": 8
+    },
+    {
+      "name": "salsal",
+      "mobile": "54321",
+      "email": "salsal@gmail.com",
+      "address": "54321",
+      "gender": "Male",
+      "encryptedPassword": "U2FsdGVkX1/rPuIokDe1/wz+udesI+6fT9lMbrO8PII=",
+      "birthdate": "2023-04-08",
+      "id": 9
+    },
+    {
+      "name": "mark",
+      "mobile": "69420",
+      "email": "kantutero@gmail.com",
+      "address": "etivac ytic",
+      "gender": "Male",
+      "encryptedPassword": "U2FsdGVkX19qhHSjYn8HCDtMfCLljCUsovGh0qniNpQ=",
+      "birthdate": "2023-04-08",
+      "id": 10
+    },
+    {
+      "name": "sample",
+      "mobile": "102938",
+      "email": "sample1@gmail.com",
+      "address": "4321 street",
+      "gender": "Male",
+      "encryptedPassword": "U2FsdGVkX19f2957uh5ZULERbW3YX4eFLABYZ+ZBZkM=",
+      "birthdate": "2023-04-08",
+      "id": 11
+    }
+  ]
+}
