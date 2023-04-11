@@ -117,7 +117,7 @@ const Login = () => {
           placeholder="Password"
         />
         <button
-          className="block w-full bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold py-2 px-4 rounded mt-4 hover:shadow-lg"
+          className="block w-full bg-gradient-to-r from-green-600 to-green-800 hover:from-green-800 hover:to-green-600 text-gray-200 font-bold py-2 px-4 rounded mt-4 hover:shadow-lg"
           onClick={proceedLogin}
         >
           LOGIN

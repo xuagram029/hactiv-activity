@@ -109,6 +109,26 @@
       "encryptedPassword": "U2FsdGVkX19f2957uh5ZULERbW3YX4eFLABYZ+ZBZkM=",
       "birthdate": "2023-04-08",
       "id": 11
+    },
+    {
+      "name": "Stefan",
+      "mobile": "0920154687",
+      "email": "asdqweq@gmail.com",
+      "address": "asdasdasdasd",
+      "gender": "Male",
+      "encryptedPassword": "U2FsdGVkX18LWbhgb2jtoIKrBLdMrUFx+FePdo8hUvE=",
+      "birthdate": "2001-04-22",
+      "id": 12
+    },
+    {
+      "name": "Bones",
+      "mobile": "09192546738",
+      "email": "gasparmitchie321@gmail.com",
+      "address": "asdasdasdasd",
+      "gender": "Male",
+      "encryptedPassword": "U2FsdGVkX1+PzJ9ur1WtdtGVZAZWyEP3iyyVDkDDoj8=",
+      "birthdate": "2001-04-22",
+      "id": 13
     }
   ]
 }
