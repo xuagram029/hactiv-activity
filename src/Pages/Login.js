@@ -8,7 +8,7 @@ import { loginSuccess, loginFailure } from "../features/login";
 
 
 const Login = () => {
-  const [username, setUsername] = useState("");
+  const [eom, setEmailOrMobile] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const dispatch = useDispatch()
@@ -18,7 +18,7 @@ const Login = () => {
       try {
         const response = await axios.get(`http://localhost:8800/user/`);
         const data = response.data;
-        const user = data.find((user) => user.name === username || user.mobile === username);
+        const user = data.find((user) => user.email === eom || user.mobile === eom);
         if (user) {
           const userPassword = CryptoJS.AES.decrypt(user.encryptedPassword, "Secret Passphrase");
           const decryptedPassword = userPassword.toString(CryptoJS.enc.Utf8);
@@ -87,9 +87,9 @@ const Login = () => {
 
   const validate = () => {
     let result = true;
-    if (username === "" || username === null) {
+    if (eom === "" || eom === null) {
       result = false;
-      toast.warning("Please Enter Username or Number");
+      toast.warning("Please Enter Email or Mobile Number");
     }
     if (password === "" || password === null) {
       result = false;
@@ -105,9 +105,9 @@ const Login = () => {
         <input
           className="block w-full border-2 rounded-md px-2 py-1 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 focus:border-blue-500"
           type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          placeholder="Username or Mobile"
+          value={eom}
+          onChange={(e) => setEmailOrMobile(e.target.value)}
+          placeholder="Email or Mobile Number"
         />
         <input
           className="block w-full border-2 rounded-md px-2 py-1 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 focus:border-blue-500"

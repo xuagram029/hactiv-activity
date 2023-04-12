@@ -230,7 +230,7 @@ const navigate = useNavigate()
             <input className="block w-full border-2 rounded-md px-2 py-1 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 focus:border-blue-500"
                 type="text" autoComplete="off" value={name} placeholder="Name" onChange={(e) => { setName(e.target.value) }} />
             <input className="block w-full border-2 rounded-md px-2 py-1 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 focus:border-blue-500"
-                type="tel" maxLength={20} value={mobile} placeholder="Mobile" onChange={(e) => { const value = e.target.value;
+                type="tel" maxLength={20} value={mobile} placeholder="Mobile Number" onChange={(e) => { const value = e.target.value;
                   if (/^[0-9]*$/.test(value)) { // Check kung numeric value yung laman ng input
                     setMobile(value);
                   } }} />
