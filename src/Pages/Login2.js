@@ -7,7 +7,7 @@ import { loginSuccess, loginFailure } from "../features/login";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
-const Login = () => {
+const Login2 = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch()
 
@@ -63,7 +63,6 @@ const Login = () => {
          onChange={formik.handleChange}
          onBlur={formik.handleBlur}
          value={formik.values.oem}
-         placeholder="Email or Mobile Number"
        />
        {formik.touched.oem && formik.errors.oem ? (
          <div>{formik.errors.oem}</div>
@@ -95,4 +94,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Login2;

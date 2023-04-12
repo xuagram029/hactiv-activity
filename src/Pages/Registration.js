@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from "axios"
@@ -9,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { registerUser } from "../features/user";
 
-const Registration = () => {
+const Reg2 = () => {
     const [user, setUser] = useState()
     const navigate = useNavigate()
     const dispatch = useDispatch()
@@ -48,7 +49,7 @@ const Registration = () => {
        mobile: '',
        email: '',
        address: '',
-       gender: '',
+       gender: 'male',
        password: '',
        birthdate: '',
      },
@@ -99,6 +100,7 @@ const Registration = () => {
          <form onSubmit={formik.handleSubmit} className="w-full max-w-md p-10 bg-white rounded-lg shadow-lg">
            <h1 className="text-3xl font-bold mb-8 text-center">REGISTER</h1>
            <input
+            autoComplete='off'
             placeholder='Name'
             className="block w-full border-2 rounded-md px-2 py-1 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 focus:border-blue-500"
              id="name"
@@ -112,6 +114,7 @@ const Registration = () => {
              <div>{formik.errors.name}</div>
            ) : null}
            <input
+            autoComplete='off'
             placeholder='Mobile Number'
             className="block w-full border-2 rounded-md px-2 py-1 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 focus:border-blue-500"
              id="mobile"
@@ -125,6 +128,7 @@ const Registration = () => {
              <div>{formik.errors.mobile}</div>
            ) : null}
            <input
+            autoComplete='off'
             placeholder='Email Address'
              className="block w-full border-2 rounded-md px-2 py-1 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 focus:border-blue-500"
              id="email"
@@ -132,12 +136,13 @@ const Registration = () => {
              type="email"
              onChange={formik.handleChange}
              onBlur={formik.handleBlur}
-             value={formik.values.email}
+             value={formik.values.email.toLowerCase()}
            />
            {formik.touched.email && formik.errors.email ? (
-             <div>{formik.errors.email}</div>
+             <div>{formik.errors.email.toLowerCase()}</div>
            ) : null}
            <input
+            autoComplete='off'
             placeholder='Address'
              className="block w-full border-2 rounded-md px-2 py-1 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 focus:border-blue-500"
              id="address"
@@ -150,20 +155,17 @@ const Registration = () => {
            {formik.touched.address && formik.errors.address ? (
              <div>{formik.errors.address}</div>
            ) : null}
-           <input
-            placeholder='Gender'
-             className="block w-full border-2 rounded-md px-2 py-1 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 focus:border-blue-500"
-             id="gender"
-             name="gender"
-             type="gender"
-             onChange={formik.handleChange}
-             onBlur={formik.handleBlur}
-             value={formik.values.gender}
-           />
+            <select className="block w-full border-2 rounded-md px-2 py-1 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 focus:border-blue-500"
+                value={formik.values.gender} name='gender' id="gender" placeholder="Gender" onChange={formik.handleChange}>
+                {/* <option disabled selected >Select Gender</option> */}
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
            {formik.touched.gender && formik.errors.gender ? (
              <div>{formik.errors.gender}</div>
            ) : null}
            <input
+            autoComplete='off'
             placeholder='Password'
              className="block w-full border-2 rounded-md px-2 py-1 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 focus:border-blue-500"
              id="password"
@@ -177,6 +179,7 @@ const Registration = () => {
              <div>{formik.errors.password}</div>
            ) : null}
            <input
+            autoComplete='off'
             placeholder='Birthday'
              className="block w-full border-2 rounded-md px-2 py-1 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 focus:border-blue-500"
              id="birthdate"
@@ -190,11 +193,14 @@ const Registration = () => {
              <div>{formik.errors.birthdate}</div>
            ) : null}
            <button type="submit" className="block w-full bg-gradient-to-r from-green-600 to-green-800 hover:from-green-800 hover:to-green-600 text-gray-200 font-bold py-2 px-4 rounded mt-4 hover:shadow-lg">Submit</button>
+          <p className="mt-4 text-sm text-gray-600">
+            Already a user?{' '}
+              <Link to="/login" className="text-blue-600 hover:text-blue-800 font-medium">Click here to login</Link>
+          </p>
          </form>
         <ToastContainer />
-
      </div>
    );
 }
 
-export default Registration
+export default Reg2
