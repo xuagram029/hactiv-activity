@@ -4,6 +4,7 @@ import Registration from "./Pages/Registration";
 import { ToastContainer } from 'react-toastify';
 import Profile from "./Pages/Profile"
 import Home from "./Pages/Home";
+import ErrorPage from "./Pages/ErrorPage";
 
 
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       path: "/profile",
       element: <Profile />,
     },
+    {
+      path: "*",
+      element: <ErrorPage />,
+    }
   ]);
 const App = () => {
   return (

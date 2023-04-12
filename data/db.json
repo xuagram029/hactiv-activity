@@ -1,24 +1,14 @@
 {
   "user": [
     {
-      "name": "Margaux",
+      "name": "Margaux Galvez",
       "mobile": "09090385195",
       "email": "Margauxgalvez01@gmail.com",
       "address": "906 san antonio st. tondo manila",
-      "gender": "Male",
-      "encryptedPassword": "U2FsdGVkX1+wkQ0/uC0P7qggpJFXSJF+IErbtkiWz20=",
-      "birthdate": "2023-04-03",
+      "gender": "MALE",
+      "password": "U2FsdGVkX1/nJLPw9fx4LtcxY1D1diCZGsiBSWbsaLk=",
+      "birthdate": "2023-04-12",
       "id": 1
-    },
-    {
-      "name": "Mitchie Gaspar",
-      "mobile": "09201340719",
-      "email": "gasparmitchie@gmail.com",
-      "address": "19 B Katarungan St. Muzon, Malabon City",
-      "gender": "Male",
-      "encryptedPassword": "U2FsdGVkX1+y+rUCYvPyOP9YB/jbUmov1BFHNQujikU=",
-      "birthdate": "2001-04-22",
-      "id": 2
     }
   ]
 }

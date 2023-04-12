@@ -20,7 +20,7 @@ const Login = () => {
         const data = response.data;
         const user = data.find((user) => user.email === eom || user.mobile === eom);
         if (user) {
-          const userPassword = CryptoJS.AES.decrypt(user.encryptedPassword, "Secret Passphrase");
+          const userPassword = CryptoJS.AES.decrypt(user.password, "Secret Passphrase");
           const decryptedPassword = userPassword.toString(CryptoJS.enc.Utf8);
           if (password === decryptedPassword) {
               dispatch(loginSuccess(user))
@@ -42,48 +42,6 @@ const Login = () => {
     }
   };
 
-
-  // const ProceedLoginusingAPI = (e) => {
-  //   e.preventDefault();
-  //   if (validate()) {
-  //     ///implentation
-  //     // console.log('proceed');
-  //     let inputobj = { username: username, password: password };
-  //     fetch("https://localhost:44308/User/Authenticate", {
-  //       method: "POST",
-  //       headers: { "content-type": "application/json" },
-  //       body: JSON.stringify(inputobj),
-  //     })
-  //       .then((res) => {
-  //         return res.json();
-  //       })
-  //       .then((resp) => {
-  //         console.log(resp);
-  //         if (Object.keys(resp).length === 0) {
-  //           toast.error("Login failed, invalid credentials");
-  //         } else {
-  //           toast.success("Success");
-  //           sessionStorage.setItem("username", username);
-  //           sessionStorage.setItem("jwttoken", resp.jwtToken);
-  //           usenavigate("/");
-  //         }
-  //         // if (Object.keys(resp).length === 0) {
-  //         //     toast.error('Please Enter valid username');
-  //         // } else {
-  //         //     if (resp.password === password) {
-  //         //         toast.success('Success');
-  //         //         sessionStorage.setItem('username',username);
-  //         //         usenavigate('/')
-  //         //     }else{
-  //         //         toast.error('Please Enter valid credentials');
-  //         //     }
-  //         // }
-  //       })
-  //       .catch((err) => {
-  //         toast.error("Login Failed due to :" + err.message);
-  //       });
-  //   }
-  // };
 
   const validate = () => {
     let result = true;

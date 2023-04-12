@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { registerUser } from "../features/user";
 
-const Registration = () => {
+const Reg2 = () => {
     const [user, setUser] = useState()
     const navigate = useNavigate()
     const dispatch = useDispatch()
@@ -197,4 +197,4 @@ const Registration = () => {
    );
 }
 
-export default Registration
+export default Reg2
