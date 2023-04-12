@@ -230,7 +230,10 @@ const navigate = useNavigate()
             <input className="block w-full border-2 rounded-md px-2 py-1 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 focus:border-blue-500"
                 type="text" autoComplete="off" value={name} placeholder="Name" onChange={(e) => { setName(e.target.value) }} />
             <input className="block w-full border-2 rounded-md px-2 py-1 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 focus:border-blue-500"
-                type="text" value={mobile} placeholder="Mobile" onChange={(e) => { setMobile(e.target.value) }} />
+                type="tel" maxLength={20} value={mobile} placeholder="Mobile Number" onChange={(e) => { const value = e.target.value;
+                  if (/^[0-9]*$/.test(value)) { // Check kung numeric value yung laman ng input
+                    setMobile(value);
+                  } }} />
             <input className="block w-full border-2 rounded-md px-2 py-1 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 focus:border-blue-500"
                 type="text" value={email} placeholder="Email" onChange={(e) => { setEmail(e.target.value) }} />
             <input className="block w-full border-2 rounded-md px-2 py-1 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 focus:border-blue-500"
@@ -246,7 +249,10 @@ const navigate = useNavigate()
             <input className="block w-full border-2 rounded-md px-2 py-1 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 hover:border-blue-500 focus:border-blue-500"
                 type="date" value={birthdate} placeholder="Birthday" onChange={(e) => { setBirthdate(e.target.value) }} />
             {/* <input type="button" value="SUBMIT" className="block w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 hover:shadow-lg"/> */}
-            <button className="block w-full bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold py-2 px-4 rounded mt-4 hover:shadow-lg" onClick={handleSubmit}>SUBMIT</button>
+            <button className="block w-full bg-gradient-to-r from-green-600 to-green-800 hover:from-green-800 hover:to-green-600 text-gray-200 font-bold py-2 px-4 rounded mt-4 hover:shadow-lg" 
+            onClick={handleSubmit}>
+              SUBMIT
+            </button>
         </form>
         <ToastContainer />
     </div>
