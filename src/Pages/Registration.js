@@ -121,7 +121,7 @@ const navigate = useNavigate()
         return duplicateFields;
       };
       
-    const IsValidate = () => {
+    const isValidate = () => {
         let isproceed = true;
         let errormessage = 'Please enter the value in ';
         // let checkmessage = 'Please enter another value in ';
@@ -176,7 +176,7 @@ const navigate = useNavigate()
       
         if (duplicateFields.length === 3) {
           toast.warning('All given information is already used. Please enter new information.');
-        } else if (IsValidate()) {
+        } else if (isValidate()) {
           const message = `The following fields are already used: ${duplicateFields.join(", ")}. Please enter new information for these fields.`;
           if (duplicateFields.length > 0) {
             toast.warning(message);
