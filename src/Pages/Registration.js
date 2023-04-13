@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { registerUser } from "../features/user";
 
-const Reg2 = () => {
+const Registration = () => {
     const [user, setUser] = useState()
     const navigate = useNavigate()
     const dispatch = useDispatch()
@@ -56,7 +56,9 @@ const Reg2 = () => {
      validationSchema: Yup.object({
        name: Yup.string()
          .required('Please Enter a Name'),
-       mobile: Yup.number()
+       mobile: Yup.string()
+         .matches(/^[0-9]+$/, 'Mobile number must contain only numbers')
+         .min(11, 'Must contain 11 digit number')
          .required('Please Enter Mobile Number'),
        email: Yup.string().email('Invalid email address').required('Please enter your valid Email Address'),
        address: Yup.string()
@@ -203,4 +205,4 @@ const Reg2 = () => {
    );
 }
 
-export default Reg2
+export default Registration

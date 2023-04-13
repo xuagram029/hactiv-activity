@@ -2,13 +2,13 @@
   "user": [
     {
       "name": "Margaux Galvez",
-      "mobile": "09090385195",
-      "email": "Margauxgalvez01@gmail.com",
+      "mobile": "09090385196",
+      "email": "margauxgalvez@gmail.com",
       "address": "906 san antonio st. tondo manila",
       "gender": "male",
-      "password": "U2FsdGVkX1+TuO6TDUeu1CLGoszLfmiIPfqn3ecDBkc=",
+      "password": "U2FsdGVkX1/tWUKiUbMVu13D8vPTVflWiuGLBGNdY6M=",
       "birthdate": "2023-04-12",
       "id": 1
     }
-  ]
+    ]
 }
