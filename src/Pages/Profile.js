@@ -2,6 +2,7 @@ import React from 'react';
 
 const Profile = () => {
   return (
+    //asdjasdhakjsdkj
 <div className="flex justify-center items-center h-screen bg-gradient-to-br from-green-400 to-green-600">
       <div className="w-full max-w-md p-4 bg-white rounded-lg shadow-lg">
         <div className="bg-white shadow overflow-hidden sm:rounded-lg">
