@@ -13,7 +13,7 @@ const Profile = () => {
   }
 
   return (
-<div className="flex justify-center items-center h-screen bg-gradient-to-br from-green-400 to-green-600">
+    <div className="flex justify-center items-center h-screen bg-gradient-to-br from-green-400 to-green-600">
       <div className="w-full max-w-md p-4 bg-white rounded-lg shadow-lg">
         <div className="bg-white shadow overflow-hidden sm:rounded-lg">
           <div className="px-4 py-5 sm:px-6 text-center">

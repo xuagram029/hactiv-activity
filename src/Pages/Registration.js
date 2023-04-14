@@ -49,24 +49,26 @@ const Registration = () => {
        mobile: '',
        email: '',
        address: '',
-       gender: 'male',
+       gender: 'Male',
        password: '',
        birthdate: '',
      },
      validationSchema: Yup.object({
        name: Yup.string()
-         .required('Please Enter a Name'),
+        .required('Please Enter a Name'),
        mobile: Yup.string()
-         .matches(/^[0-9]+$/, 'Mobile number must contain only numbers')
-         .min(11, 'Must contain 11 digit number')
-         .required('Please Enter Mobile Number'),
-       email: Yup.string().email('Invalid email address').required('Please enter your valid Email Address'),
+        .matches(/^[0-9]+$/, 'Mobile number must contain only numbers')
+        .min(11, 'Must contain 11 digit number')
+        .required('Please Enter Mobile Number'),
+       email: Yup.string()
+        .email('Invalid email address')
+        .required('Please enter your valid Email Address'),
        address: Yup.string()
-       .required('Please Enter your Address'),
+        .required('Please Enter your Address'),
        password: Yup.mixed()
-       .required('Please Enter a Password'),
+        .required('Please Enter a Password'),
        birthdate: Yup.date()
-       .required('Required'),
+        .required('Required'),
      }),
      onSubmit: async (values) => {
         const encryptedPassword = CryptoJS.AES.encrypt(values.password, "Secret Passphrase").toString();

@@ -9,6 +9,16 @@
       "password": "U2FsdGVkX1/tWUKiUbMVu13D8vPTVflWiuGLBGNdY6M=",
       "birthdate": "2023-04-12",
       "id": 1
+    },
+    {
+      "name": "Mitchie Gaspar",
+      "mobile": "09201340719",
+      "email": "gaasdsad@gmail.com",
+      "address": "asdadasd",
+      "gender": "Male",
+      "password": "U2FsdGVkX19UjklxEHqiZkF62MldcxEEj4ZlVXjLJkA=",
+      "birthdate": "2001-04-22",
+      "id": 2
     }
-    ]
+  ]
 }
